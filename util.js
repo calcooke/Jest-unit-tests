@@ -24,3 +24,20 @@ exports.validateInput = (text, notEmpty, isNumber) => {
   }
   return true;
 };
+
+//Validate the name and age in the input fields
+
+exports.checkAndGenerate = (name, age) => {
+
+  if (
+    !validateInput(name, true, false) ||
+    !validateInput(age, false, true)
+  ) {
+    return false;  //return false if validation fails
+  }
+
+  // If we make if past the if block, then we can pass the checked name and age into
+  // generate text
+
+  return generateText(name, age);
+}
