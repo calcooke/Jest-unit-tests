@@ -23,7 +23,7 @@
  });
 
  test('Should generate a valid text output', ()=>{
-     const text = checkAndGenerate('Max, 29');
+     const text = checkAndGenerate('Max', 29);
      expect(text).toBe('Max (29 years old)')
  });
 
